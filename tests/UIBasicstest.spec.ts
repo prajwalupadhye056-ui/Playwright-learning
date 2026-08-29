@@ -2,7 +2,7 @@
 
 import { test, expect } from '@playwright/test';
 
-test.only('Browser Context Playwright test',async ({ browser })=>
+test('Browser Context Playwright test',async ({ browser })=>
 {
 
 const context= await browser.newContext();
@@ -43,11 +43,19 @@ console.log(allTitles)
 });
 
 
-// test('Page Playwright test',async ({ page })=>
-// {
-// await page.goto("https://google.com")
-// //get title assertion
+test.only('UI Controls test',async ({ page })=>
+{
+await page.goto("https://rahulshettyacademy.com/loginpagePractise/")
 
-// console.log(await page.title())
-// await expect(page).toHaveTitle("Google")
-// });
+const userName1 = page.locator('#username')
+const signIn1= page.locator("#signInBtn")
+
+const dropdown=page.locator("select.form-control")
+await dropdown.selectOption("consult")
+
+//Radio Buttons
+ await page.locator(".radiotextsty").last().click()
+ await page.locator("#okayBtn").click()
+ await page.pause()
+
+})
