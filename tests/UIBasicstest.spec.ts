@@ -56,6 +56,8 @@ await dropdown.selectOption("consult")
 //Radio Buttons
  await page.locator(".radiotextsty").last().click()
  await page.locator("#okayBtn").click()
+
+ 
  await page.pause()
 
 })
