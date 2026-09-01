@@ -50,6 +50,8 @@ await page.goto("https://rahulshettyacademy.com/loginpagePractise/")
 const userName1 = page.locator('#username')
 const signIn1= page.locator("#signInBtn")
 
+const documentslink= page.locator("[href*='documents-request']")
+
 const dropdown=page.locator("select.form-control")
 await dropdown.selectOption("consult")
 
@@ -57,7 +59,22 @@ await dropdown.selectOption("consult")
  await page.locator(".radiotextsty").last().click()
  await page.locator("#okayBtn").click()
 
- 
- await page.pause()
+ console.log(await page.locator(".radiotextsty").last().isChecked())
+ await expect(page.locator(".radiotextsty").last()).toBeChecked()
+
+
+ //Checkboxes
+ await page.locator("#terms").click()
+ await expect(page.locator("#terms")).toBeChecked()
+ await page.locator("#terms").uncheck()
+expect( await page.locator("#terms").isChecked()).toBeFalsy()   
+
+
+//Blinking text
+await expect(documentslink).toHaveAttribute("class","blinkingText")
+
+//child windows and tabs switching browser context
+
+
 
 })
