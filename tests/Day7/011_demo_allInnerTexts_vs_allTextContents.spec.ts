@@ -13,10 +13,10 @@ test("Comparing methods", async ({ page }) => {
     let productNames=await products.allInnerTexts() // Preferable to use allInnerTexts() 
     // over allTextContents() because it trims the text and removes extra spaces and new 
     // lines.
-    console.log("Product Names captured by allInnerText(): ", productNames)
+    console.log("Product Names captured by allInnerTexts(): ", productNames)
 
     productNames = await products.allTextContents()
-    console.log("Product Names captured by allTextContent(): ", productNames)
+    console.log("Product Names captured by allTextContents(): ", productNames)
 
     let productNamesTrimmed= productNames.map((text) => text?.trim());
     console.log("Product Names after trimmed: ", productNamesTrimmed)
