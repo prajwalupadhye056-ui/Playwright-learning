@@ -23,7 +23,7 @@ test.describe('Handling Dropdowns', () => {
    //2.using option value
    //3.using index
 
-   //1. Select by visible label :always Preferable
+   //1. Select by visible Text :always Preferable
 
    //selectOption -selects option from dropdown
 
@@ -31,12 +31,13 @@ test.describe('Handling Dropdowns', () => {
    await expect(countrySelect).toHaveValue('usa')
    
 
-    //2. Select by option value
+    //2. Select by value
 
     await countrySelect.selectOption({value:'uk'})
     await expect(countrySelect).toHaveValue('uk')
 
     //3.Select by index
+    
     //index starts with 0
     await countrySelect.selectOption({index:3})
     await expect(countrySelect).toHaveValue('germany')
@@ -94,7 +95,8 @@ test.describe('Handling Dropdowns', () => {
 
 
           // Store the original list of option texts
-             const originalList = optionsText; //It just creates a reference to the same array.
+             const originalList = optionsText; //It just creates a reference to the 
+             //same array.
              //If one changes → the other also changes
          
              //const sortedList = optionsText.sort(); //This is wrong because it sorts the 
