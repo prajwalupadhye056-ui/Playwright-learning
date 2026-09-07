@@ -64,6 +64,10 @@ export default defineConfig({
     //   name: 'Mobile Safari',
     //   use: { ...devices['iPhone 12'] },
     // },
+    // {
+    //   name:'iphone',
+    //   use :{...devices['iPhone 15']},
+    // }
 
     /* Test against branded browsers. */
     // {
