@@ -8,8 +8,7 @@ test.describe('Data Entry Form Validation', () => {
 
   test.beforeEach(async ({ page }) => {
     await page.goto(pageUrl);
-    //await expect(page.getByText('AutoPlay')).toBeVisible();
-
+    
   });
 
 
@@ -89,7 +88,6 @@ test.describe('Data Entry Form Validation', () => {
       const allDays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
   //with Map
-  
   const allCheckboxes=allDays.map((day)=>{
     return page.getByLabel(day)
   })
@@ -101,6 +99,8 @@ for(const checkbox of allCheckboxes){
 
 
   //without using map (prefer loop)
+  
+  // How to validate multiple checkboxes 
     for(const day of allDays){
         const checkbox=page.getByLabel(day)
         await checkbox.check()
