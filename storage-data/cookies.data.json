@@ -1,0 +1,12 @@
+[
+  {
+    "name": "auth_session_admin",
+    "value": "authenticated",
+    "domain": "sdetqa.vercel.app",
+    "path": "/",
+    "expires": 1790066176,
+    "httpOnly": false,
+    "secure": false,
+    "sameSite": "Lax"
+  }
+]
