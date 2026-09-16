@@ -52,6 +52,10 @@ test("Cookies demo", async()=>{
     let cookies=await context.cookies()
     console.log("Cookies=====>", cookies)
 
+    //count the cookies
+    cookies=await context.cookies()
+    console.log(cookies.length)
+
      //Clear the cookies
   await context.clearCookies()
    cookies=await context.cookies()
