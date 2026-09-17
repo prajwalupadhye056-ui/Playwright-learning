@@ -15,32 +15,29 @@ test('File download', async ({ page }) => {
     )
 
     expect(download.suggestedFilename()).toContain("sample.txt");
-
-  // **************************************************************************
-    // save the file in the custom path
-    //const downloadPath = "downloads/sample.txt"   // Static name (if you know the name)
+    const downloadPath = "downloads/sample.txt"   // Static name (if you know the name)
+    await download.saveAs(downloadPath)
     
-
+    //approach1
     //const downloadPath="downloads/"+download.suggestedFilename() // Dynamic file name 
-    // - approach 1
-
-    const downloadPath = `downloads/${download.suggestedFilename()}` // Dynamic file name 
-  // - approach 2
+   
+    //approach 2
+    // const downloadPath = `downloads/${download.suggestedFilename()}` // Dynamic file name 
+ 
     
-      await download.saveAs(downloadPath)
-
-      //****************************************************************** */
+   
+//************************************************************************************************/
 
        //Checking file exists
           const fileExists = fs.existsSync(downloadPath);
           expect(fileExists).toBeTruthy()
       
-          // delete the file/ clean up the file inside the folder
-          if (fileExists) {
-              fs.unlinkSync(downloadPath)
-          }
+        //   // delete the file/ clean up the file inside the folder
+        //   if (fileExists) 
+        //     {
+        //       fs.unlinkSync(downloadPath)
+        //      }
       
-          await page.close()
       
       })
 // ****************************************************************************************
@@ -68,7 +65,7 @@ test('File download', async ({ page }) => {
      expect(pdfPage).toBeTruthy();
  
      await page.waitForTimeout(5000)
-     await browser.close();
+  
  });
 
 //Approach 2- using the default browser context provided by playwright
@@ -84,7 +81,7 @@ test('File download', async ({ page }) => {
      expect(pdfPage).toBeTruthy();
  
      await page.waitForTimeout(5000)
-     await pdfPage.close();
+
  });
       
 
