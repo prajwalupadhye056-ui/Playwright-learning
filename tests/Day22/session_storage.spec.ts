@@ -1,7 +1,6 @@
 import { chromium } from '@playwright/test';
 import fs from 'fs';
 
-
 async function saveSessionStorage() {
 
     const browser = await chromium.launch({ headless: false });
@@ -27,14 +26,15 @@ async function saveSessionStorage() {
     // capture session storage data
     const sessionStorageData = await page.evaluate(() => {
         return sessionStorage;
-    })
+    });
 
     // Save Session Storage to file
-     fs.writeFileSync("./storage_data/session_data.json", JSON.stringify(sessionStorageData));
+    fs.writeFileSync('./storage_data/session_data.json', JSON.stringify(sessionStorageData));
 
-    console.log("session data captured......")
-    //await browser.close()
-
+    console.log('session data captured......');
+    await browser.close();
 }
 
-saveSessionStorage()
+(async () => {
+    await saveSessionStorage();
+})();

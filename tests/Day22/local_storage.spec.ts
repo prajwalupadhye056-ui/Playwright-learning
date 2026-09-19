@@ -2,9 +2,9 @@ import { chromium } from "playwright";
 
 async function saveAdminStorage() {
 
-    let browser = await chromium.launch({ headless: false });
-    let context = await browser.newContext();
-    let page = await context.newPage();
+    const browser = await chromium.launch({ headless: false });
+    const context = await browser.newContext();
+    const page = await context.newPage();
 
     //Login
     await page.goto('https://sdetqa.vercel.app/login_app');
@@ -18,15 +18,16 @@ async function saveAdminStorage() {
     await page.waitForSelector('text=Dashboard Welcome', { state: 'visible' });
 
     // able to capture both cookies storage and local storage
-    await context.storageState({ path: './storage_data/admin_data.json' })
+    await context.storageState({ path: './storage_data/admin_data.json' });
 
-    await browser.close()
+    await browser.close();
 }
+
 async function saveUserStorage() {
 
-    let browser = await chromium.launch({ headless: false });
-    let context = await browser.newContext();
-    let page = await context.newPage();
+    const browser = await chromium.launch({ headless: false });
+    const context = await browser.newContext();
+    const page = await context.newPage();
 
     //Login
     await page.goto('https://sdetqa.vercel.app/login_app');
@@ -39,9 +40,11 @@ async function saveUserStorage() {
     await page.waitForSelector('text=Dashboard Welcome', { state: 'visible' });
 
     // able to capture both cookies storage and local storage
-    await context.storageState({ path: './storage_data/user_data.json' })
-    await browser.close()
-     }
-//calling the functions
-await saveAdminStorage()
-await saveUserStorage()
+    await context.storageState({ path: './storage_data/user_data.json' });
+    await browser.close();
+}
+
+(async () => {
+    await saveAdminStorage();
+    await saveUserStorage();
+})();
