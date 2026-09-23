@@ -15,6 +15,7 @@
     "allure-playwright": "^3.12.2"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "csv-parse": "^7.0.2",
     "xlsx": "^0.18.5"
   }

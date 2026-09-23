@@ -1,0 +1,53 @@
+[
+  {
+    id: 'button-name',
+    impact: 'critical',
+    tags: [
+      'cat.name-role-value',
+      'wcag2a',
+      'wcag412',
+      'section508',
+      'section508.22.a',
+      'TTv5',
+      'TT6.a',
+      'EN-301-549',
+      'EN-9.4.1.2',
+      'ACT',
+      'RGAAv4',
+      'RGAA-11.9.1'
+    ],
+    description: 'Ensure buttons have discernible text',
+    help: 'Buttons must have discernible text',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/button-name?application=playwright',
+    nodes: [ [Object] ]
+  },
+  {
+    id: 'color-contrast',
+    impact: 'serious',
+    tags: [
+      'cat.color',  'wcag2aa',
+      'wcag143',    'TTv5',
+      'TT13.c',     'EN-301-549',
+      'EN-9.1.4.3', 'ACT',
+      'RGAAv4',     'RGAA-3.2.1'
+    ],
+    description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',
+    help: 'Elements must meet minimum color contrast ratio thresholds',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright',
+    nodes: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ]
+  },
+  {
+    id: 'label-title-only',
+    impact: 'serious',
+    tags: [ 'cat.forms', 'best-practice' ],
+    description: 'Ensure that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes',
+    help: 'Form elements should have a visible label',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/label-title-only?application=playwright',
+    nodes: [ [Object] ]
+  }
+]
