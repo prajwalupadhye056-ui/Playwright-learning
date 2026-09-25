@@ -1,0 +1,33 @@
+Total Violations: 8
+
+Rule: aria-allowed-attr
+Impact: critical
+Description: Ensure an element's role supports its ARIA attributes
+
+Rule: button-name
+Impact: critical
+Description: Ensure buttons have discernible text
+
+Rule: color-contrast
+Impact: serious
+Description: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+
+Rule: image-alt
+Impact: critical
+Description: Ensure <img> elements have alternative text or a role of none or presentation
+
+Rule: label-title-only
+Impact: serious
+Description: Ensure that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes
+
+Rule: landmark-contentinfo-is-top-level
+Impact: moderate
+Description: Ensure the contentinfo landmark is at top level
+
+Rule: link-name
+Impact: serious
+Description: Ensure links have discernible text
+
+Rule: page-has-heading-one
+Impact: moderate
+Description: Ensure that the page, or at least one of its frames contains a level-one heading

@@ -118,6 +118,7 @@ test.describe("Accessibility tests",()=>{
         
             await testInfo.attach("AccessibilityReport.json",
                 {
+                //To convert Javascript object to Json Object
             body: JSON.stringify(results),
             contentType: 'application/json'
                 })

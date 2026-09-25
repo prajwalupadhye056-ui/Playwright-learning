@@ -1,0 +1,132 @@
+[
+  {
+    id: 'aria-allowed-attr',
+    impact: 'critical',
+    tags: [
+      'cat.aria',
+      'wcag2a',
+      'wcag412',
+      'EN-301-549',
+      'EN-9.4.1.2',
+      'RGAAv4',
+      'RGAA-7.1.1'
+    ],
+    description: "Ensure an element's role supports its ARIA attributes",
+    help: 'Elements must only use supported ARIA attributes',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright',
+    nodes: [ [Object] ]
+  },
+  {
+    id: 'button-name',
+    impact: 'critical',
+    tags: [
+      'cat.name-role-value',
+      'wcag2a',
+      'wcag412',
+      'section508',
+      'section508.22.a',
+      'TTv5',
+      'TT6.a',
+      'EN-301-549',
+      'EN-9.4.1.2',
+      'ACT',
+      'RGAAv4',
+      'RGAA-11.9.1'
+    ],
+    description: 'Ensure buttons have discernible text',
+    help: 'Buttons must have discernible text',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/button-name?application=playwright',
+    nodes: [ [Object], [Object], [Object] ]
+  },
+  {
+    id: 'color-contrast',
+    impact: 'serious',
+    tags: [
+      'cat.color',  'wcag2aa',
+      'wcag143',    'TTv5',
+      'TT13.c',     'EN-301-549',
+      'EN-9.1.4.3', 'ACT',
+      'RGAAv4',     'RGAA-3.2.1'
+    ],
+    description: 'Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds',
+    help: 'Elements must meet minimum color contrast ratio thresholds',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright',
+    nodes: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object]
+    ]
+  },
+  {
+    id: 'image-alt',
+    impact: 'critical',
+    tags: [
+      'cat.text-alternatives',
+      'wcag2a',
+      'wcag111',
+      'section508',
+      'section508.22.a',
+      'TTv5',
+      'TT7.a',
+      'TT7.b',
+      'EN-301-549',
+      'EN-9.1.1.1',
+      'ACT',
+      'RGAAv4',
+      'RGAA-1.1.1'
+    ],
+    description: 'Ensure <img> elements have alternative text or a role of none or presentation',
+    help: 'Images must have alternative text',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright',
+    nodes: [ [Object], [Object] ]
+  },
+  {
+    id: 'label-title-only',
+    impact: 'serious',
+    tags: [ 'cat.forms', 'best-practice' ],
+    description: 'Ensure that every form element has a visible label and is not solely labeled using hidden labels, or the title or aria-describedby attributes',
+    help: 'Form elements should have a visible label',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/label-title-only?application=playwright',
+    nodes: [ [Object] ]
+  },
+  {
+    id: 'link-name',
+    impact: 'serious',
+    tags: [
+      'cat.name-role-value',
+      'wcag2a',
+      'wcag244',
+      'wcag412',
+      'section508',
+      'section508.22.a',
+      'TTv5',
+      'TT6.a',
+      'EN-301-549',
+      'EN-9.2.4.4',
+      'EN-9.4.1.2',
+      'ACT',
+      'RGAAv4',
+      'RGAA-6.2.1'
+    ],
+    description: 'Ensure links have discernible text',
+    help: 'Links must have discernible text',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright',
+    nodes: [ [Object] ]
+  },
+  {
+    id: 'page-has-heading-one',
+    impact: 'moderate',
+    tags: [ 'cat.semantics', 'best-practice' ],
+    description: 'Ensure that the page, or at least one of its frames contains a level-one heading',
+    help: 'Page should contain a level-one heading',
+    helpUrl: 'https://dequeuniversity.com/rules/axe/4.13/page-has-heading-one?application=playwright',
+    nodes: [ [Object] ]
+  }
+]
