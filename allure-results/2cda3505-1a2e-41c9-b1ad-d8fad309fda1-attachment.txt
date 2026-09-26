@@ -1,0 +1,25 @@
+Booking details before update: {
+  firstname: 'Jim',
+  lastname: 'Brown',
+  totalprice: 1000,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-09-01', checkout: '2026-09-05' },
+  additionalneeds: 'super bowls'
+}
+Token generated 2f7a07d4b4c96b3
+Partially Updated booking {
+  firstname: 'Scott',
+  lastname: 'Tiger',
+  totalprice: 1000,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-09-01', checkout: '2026-09-05' },
+  additionalneeds: 'mango'
+}
+Full Updated booking {
+  firstname: 'John',
+  lastname: 'Kenedy',
+  totalprice: 2000,
+  depositpaid: true,
+  bookingdates: { checkin: '2026-09-02', checkout: '2026-09-07' },
+  additionalneeds: 'orange'
+}
